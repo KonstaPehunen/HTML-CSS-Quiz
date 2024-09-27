@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="validate.js"></script>
+    <script src="solution.js"></script>
+</head>
+
+<body class="bg-customGray flex flex-1 flex-col min-h-screen">
+    <main class="flex-1 flex flex-col items-center p-4">
+        <form id="quiz-form" class="" data-answer="option-1" onsubmit="return handleSubmit(event)">
+            <fieldset class="flex flex-col items-center w-full max-w-4xl text-2xl text-quizzText">
+                <legend id="question" class="text-quizzText text-2xl select-none mt-10 mb-10 text-center"></legend>
+
+                <div class="w-full max-w-4xl text-2xl text-quizzText p-6 mb-6 rounded-lg border-2 border-gray-600 flex items-center">
+                    <input class="mr-2" type="radio" name="option" id="option-1">
+                    <label for="option-1">
+                        <span id="option1-text"></span>
+                    </label>
+                </div>
+
+                <div class="w-full max-w-4xl text-2xl text-quizzText p-6 mb-6 rounded-lg border-2 border-gray-600 flex items-center">
+                    <input class="mr-2" type="radio" name="option" id="option-2">
+                    <label for="option-2">
+                        <span id="option2-text"></span>
+                    </label>
+                </div>
+                <div class="w-full max-w-4xl text-2xl text-quizzText p-6 mb-6 rounded-lg border-2 border-gray-600 flex items-center">
+                    <input type="radio" name="option" id="option-3"> <label for="option-3" class="mr-2">
+                        <span id="option3-text"></span>
+                    </label>
+                </div>
+                <div class="w-full max-w-4xl text-2xl text-quizzText p-6 mb-6 rounded-lg border-2 border-gray-600 flex items-center">
+                    <input type="radio" name="option" id="option-4">
+                    <label for="option-4" class="mr-2">
+                        <span id="option4-text"></span>
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+
+        <aside class="bg-zinc-800 text-quizzText w-full flex flex-col rounded-lg border border-gray-600 select-none cursor-pointer p-4">
+            <div id="solution-container">
+                View Solution
+                <span id="solution-content" class="mb-6 text-center"></span>
+            </div>
+        </aside>
+
+
+    </main>
+        <footer class="w-full p-6 border-t border-gray-600 flex justify-end items-center"></footer>
+            <button type="submit" form="quiz-form" name="submitButton" value="html" class="bg-buttonGray border-2 border-slate-700 text-quizzText px-4 py-2 rounded hover:bg-blue-600">
+                Submit
+            </button>
+        </footer>
+
+</body>
+
+</html>
