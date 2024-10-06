@@ -1,0 +1,7 @@
+#correct-questions li::marker {
+    color: #38bdf8;
+}
+
+#wrong-questions li::marker {
+    color: #38bdf8;
+}
