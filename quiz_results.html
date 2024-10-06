@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script src="resultsBackend.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom_css.css">
+</head>
+
+<body class="bg-slate-900 to-slate-950 flex flex-col  text-sky-400 text-center min-h-screen select-none">
+    <header class="p-4 border-b border-slate-300/10 shadow shadow-slate-950">
+        <h1 class="text-2xl">Your Quiz Results</h1>
+    </header>
+    <main class="flex-1 flex flex-col justify-center items-center px-4">
+        <section class="bg-slate-800 w-full text-xs text-start flex flex-col space-y-4 border border-slate-300/10 rounded px-4 shadow-lg shadow-slate-950 sm:w-2/4 sm:text-lg md:w-2/4 md:text-lg lg:w-1/4 lg:text-lg xl:w-1/4 xl:text-lg 2xl:w-1/4 2xl:text-lg" aria-labelledby="section-heading">
+            <h2 id="section-heading" class="font-bold mt-4">Summary</h2>
+            <span id="points" class="text-sm"></span>
+            <div id="correct-questions-container">
+                <h3 class="font-bold">Your correct answers are<br></h3>
+                <ul id="correct-questions" class="list-disc text-sm ml-3 sm:ml-3 md:ml-3 lg:ml-3 xl:ml-3 2xl:ml-3"></ul>
+            </div>
+            <div id="wrong-questions-container">
+                <h3 class="font-bold">Your wrong answers are<br></h3>
+                <ul id="wrong-questions" class="list-disc text-sm ml-3 sm:ml-3 md:ml-3 lg:ml-3 xl:ml-3 2xl:ml-3"></ul>
+            </div>
+            <div>
+                <button id="play-again-button" class="bg-slate-900 border border-slate-700 text-xs font-bold px-2 py-2 mb-2 rounded hover:bg-slate-950 hover:text-sky-500 active:scale-95 active:translate-y-1 transition transform shadow-sm shadow-slate-950">Play again</button>
+                <button id="return-to-frontpage-button" class="bg-slate-900 border border-slate-700 text-xs font-bold px-2 py-2 mb-4 rounded hover:bg-slate-950 hover:text-sky-500 active:scale-95 active:translate-y-1 transition transform shadow-sm shadow-slate-950">Return to frontpage</button>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full p-4 borded-2 border-t border-slate-300/10 flex justify-center items-center">
+        <span>Konsta Pehunen</span>
+    </footer>
+</body>
+
+</html>
+
