@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quizBackend.js"></script>
+</head>
+
+<body class="bg-slate-900 text-sky-400 flex flex-col min-h-screen">
+    <main class="flex-1 flex flex-col items-center mx-4">
+        <form id="quiz-form" class="w-full sm:w-3/5 md:w-3/5 lg:w-2/5 xl:w-2/5 2xl:h-2/5" data-answer="option-2"
+            onsubmit="return handleSubmit()">
+            <fieldset>
+                <legend id="question" class="text-xl select-none mt-10 mb-10 text-center"></legend>
+                <div class="bg-slate-800 flex p-6 mb-6 rounded-lg border border-slate-300/10 items-center shadow-md shadow-slate-950">
+                    <input class="cursor-pointer" type="radio" name="option" id="option-1" aria-label="Option 1">
+                    <label for="option-1" id="option1-text" class="ml-4">test</label>
+                </div>
+                <div class="bg-slate-800 flex p-6 mb-6 rounded-lg border border-slate-300/10 items-center shadow-md shadow-slate-950">
+                    <input class="cursor-pointer" type="radio" name="option" id="option-2" aria-label="Option 2">
+                    <label for="option-2" id="option2-text" class="ml-4"></label>
+                </div>
+                <div class="bg-slate-800 flex p-6 mb-6 rounded-lg border border-slate-300/10 items-center shadow-md shadow-slate-950">
+                    <input class="cursor-pointer" type="radio" name="option" id="option-3" aria-label="Option 3">
+                    <label for="option-3" id="option3-text" class="ml-4"></label>
+                </div>
+                <div class="bg-slate-800 flex p-6 rounded-lg border border-slate-300/10 items-center shadow-md shadow-slate-950">
+                    <input class="cursor-pointer" type="radio" name="option" id="option-4" aria-label="Option 4">
+                    <label for="option-4" id="option4-text" class="ml-4"></label>
+                </div>
+            </fieldset>
+        </form>
+        
+        <aside class="mx-8 bg-slate-700 p-4 mt-6 flex rounded-lg border border-slate-300/10 select-none cursor-pointer w-full sm:w-3/5 md:w-3/5 lg:w-2/5 xl:w-2/5 2xl:h-2/5 shadow-md shadow-slate-950">
+            <div id="solution-container" class="flex flex-col">
+                View Solution
+                <span id="solution-content" class="hidden text-green-500 mt-4"></span>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="w-full p-6 border-t border-slate-300/10 flex justify-end items-center">
+        <button type="submit" form="quiz-form" class="bg-slate-800 border border-slate-700 text-sm font-bold px-4 py-2 mb-2 rounded hover:bg-slate-950 hover:text-sky-500 active:scale-95 active:translate-y-1 transition transform shadow-sm shadow-slate-950" aria-label="Submit the quiz answer">
+            Submit
+        </button>
+    </footer>
+</body>
+
+</html>
