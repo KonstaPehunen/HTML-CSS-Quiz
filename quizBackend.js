@@ -99,7 +99,7 @@ function buildResultStrings() {
     }
 
     for (let i = 0; i < answeredWrong.length; i++) {
-        wrongAnswersString += "<li class='text-red-600'>" + answeredWrong[i];
+        wrongAnswersString += "<li class='text-red-400'>" + answeredWrong[i];
     }
     
     sessionStorage.setItem("points", pointsString);
